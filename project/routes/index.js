@@ -3,7 +3,7 @@ const router = express.Router()
 
 const Url = require('../models/URL')
  // @route     GET /:code
- // @desc      Redorect to the long original url
+ // @desc      Redirect to the long original url
 router.get('/:code' , async(req,res) => {
     try {
         const url = await Url.findOne( {urlCode : req.params.code} )
